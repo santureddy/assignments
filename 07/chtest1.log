@@ -1,0 +1,15 @@
+Where `name: jenkins` refers to the serviceAccount created for jenkins.
+We can also define which plugins we want to install on our Jenkins. We use some default plugins like git and the pipeline plugin.
+
+Now you can install Jenkins by running the helm install command and passing it the following arguments:
+
+The name of the release jenkins
+
+The -f flag with the YAML file with overrides jenkins-values.yaml
+
+The name of the chart jenkinsci/jenkins
+
+The -n flag with the name of your namespace jenkins
+
+$ chart=jenkinsci/jenkins
+$ helm install jenkins -n jenkins -f jenkins-values.yaml $chart
